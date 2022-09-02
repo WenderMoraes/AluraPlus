@@ -1,0 +1,155 @@
+:root { /* Criando variáveis */
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --botao-azul-efeito:#0e56ad;
+
+    --fonte-principal: 'Inter';
+}
+
+* { /* Setando configurações na pagina */
+    margin: 0; /* Margem zerada */
+    padding: 0; /* Espaçamento zerado */
+}
+
+body {
+    background-color: var(--cor-de-fundo); /* Cor de fundo do corpo da pagina */
+    color: var(--branco-principal); /* Cor da fonte */
+    font-family: var(--fonte-principal); /* Fonte baixada */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: 400; /* Peso da fonte */
+}
+
+.principal {
+    background-image: url("img/Background.png"); /* Para buscar uma imagem da pasta */
+    background-repeat: no-repeat; /* Para não repetir a imagem de fundo */
+    background-size:contain; /* Vai preencher todo o container que no caso é a TAG section */
+    align-items: center; /* Para alinhar os itens no centro da tela */
+    text-align: center; /* Para alinhar os Texto no centro da tela */
+}
+
+.container {
+    height: 100vh; /* 100% da altura do view port */
+    display: grid; /* Para alterar o display para grid */
+    grid-template-columns: 50% 50%; /* adicionando a quantidade de coluna 2 colunas divididas p */
+}
+
+.container__caixa {
+    margin:  0 6em; /* ("Cima e Baixo" / "Direita e Esquerda") */
+}
+
+.container__titulo {
+    font-size: 28px; /* Tamanho da fonte */
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0; /* (Top, direita, baixo, esquerda) */
+}
+
+.container__botao {
+    background-color: var(--botao-azul); /* Cor do botão */
+    border-radius: 8px; /* Para arredondar as bordar */
+    color: var(--branco-principal); /* Cor da fonte */
+    display: block; /* Para o display ficar em bloco */
+    padding: 1em; /* Espaçamento interno */
+    text-decoration: none; /* Para remover o sublinhado do texto do botao */
+    margin-bottom: 1rem; /* Margem na parte de baixo */
+}
+
+.botao__secundario {
+    background-color: transparent; /* Para deixar a cor de fundo transparente */
+    border: 2px solid var(--branco-principal); /* Para adicionar uma borda */
+}
+
+.container__aviso {
+    font-size: 12px; /* Tamanho da fonte */
+    color: var(--cinza-secundario); /* Cor da fonte */
+}
+
+.secundario__imagem {
+    width: 80%; /* Largura da pagina */
+}
+
+.secundario {
+    align-items: center; /* Para alinhar os itens no centro da tela */
+    margin: 0 10em; /* Margem dos lados ("Cima e Baixo" / "Direita e Esquerda") */
+}
+
+.descricao__titulo {
+    font-size: 47px; /* Tamanho da fonte */
+    font-weight: 700; /* Peso da fonte */
+    color: var(--branco-principal);
+    margin-bottom: 0.1em; /* Margem na parte de baixo */
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+}
+
+.secundario__botao {
+    display: inline-block; /* Ele pega as melhores parte do inline e block (Transformando o elemento em linha / block quebrando a linha */
+    margin-top: 1em; /* Margem no topo */
+}
+
+.container__descricao {
+    padding: 2em; /* Espaçamento interno */
+}
+
+.dispositivo__lista {
+    display: flex; /* Transforma em um flex container, direção padrão sendo em linha*/
+    justify-content: center; /* Centralizando os itens da lista */
+    list-style-type: none; /*Para remover os postos que gera da lista */
+    margin: 5em 0; /* Cima e baixo / lados */
+}
+
+.dispositivos {
+    text-align: center; /* Para centralizar o texto no centro */
+}
+
+.dispositivos__titulo {
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.lista__item {
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+.rodape {
+    text-align: center;
+    margin: 3em 4em;
+}
+
+.rodape__lista {
+    display: flex; /* Transformando em um flex container, direção padrão sendo em linha */
+    justify-content: center; /*Para centralizar os itens da lista */
+    list-style-type: none; /*Para remover os postos da lista */
+    margin-top: 2em;
+}
+
+.rodape__link a {
+    text-decoration: none;
+    color: var(--branco-principal);
+    margin-left: 1em;
+}
+
+.rodape__link a:hover { /* Toda vez que o mouse passar por cima */
+    color: var(--botao-azul);
+}
+
+.rodape__link a:active { /* quando estiver ativo */
+    color: red;
+}
+
+.rodape__texto {
+    margin: 1em 0;
+    color: var(--cinza-secundario);
+    font-size: 14px;
+}
+
+.container__botao:hover {
+    background-color: var(--botao-azul-efeito);
+    color: var(--cor-de-fundo);
+}
